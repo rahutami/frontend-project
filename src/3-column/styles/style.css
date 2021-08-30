@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/*paragraphs*/
+/* (background, headings, buttons) */
+html {
+  font-size: 15px;
+}
+
+html > * {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.three-column-preview {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.three-column-preview .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.three-column-preview .card {
+  padding: 40px;
+  position: relative;
+}
+
+.three-column-preview .card h1 {
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display';
+  color: #f2f2f2;
+}
+
+.three-column-preview .card a {
+  text-decoration: none;
+}
+
+.three-column-preview .card a:hover {
+  color: #f2f2f2;
+}
+
+.three-column-preview .card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: .7rem;
+  margin-bottom: 80px;
+}
+
+.three-column-preview .card.sedan {
+  background-color: #e38826;
+}
+
+.three-column-preview .card.sedan .btn {
+  color: #e38826;
+}
+
+.three-column-preview .card.suv {
+  background-color: #006970;
+}
+
+.three-column-preview .card.suv .btn {
+  color: #006970;
+}
+
+.three-column-preview .card.luxury {
+  background-color: #004241;
+}
+
+.three-column-preview .card.luxury .btn {
+  color: #004241;
+}
+
+.three-column-preview .card .btn {
+  position: absolute;
+  bottom: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f2f2f2;
+  font-size: .8rem;
+  font-weight: 400;
+  border: 2px solid #f2f2f2;
+  -webkit-transition: color, background-color, 200ms linear;
+  transition: color, background-color, 200ms linear;
+}
+
+.three-column-preview .card .btn:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f2f2f2;
+}
+
+@media only screen and (max-width: 650px) {
+  .three-column-preview .three-column-preview {
+    height: 100%;
+  }
+  .three-column-preview .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+    margin: 40px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

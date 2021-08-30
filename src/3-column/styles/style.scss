@@ -1,0 +1,105 @@
+@import './styling';
+
+html {
+    font-size: 15px;
+}
+
+html>* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.three-column-preview{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:stretch;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 40px;
+    position: relative;
+
+    h1 {
+        margin: 20px 0;
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Display';
+        color: $veryLightGray;
+    }
+
+    a{
+        text-decoration: none;
+
+        &:hover{
+            color: $veryLightGray;
+        }
+    }
+
+    p{
+        color: $transparentWhite;
+        font-size: .7rem;
+        margin-bottom: 80px;
+    }
+    
+    &.sedan{
+        background-color: $brightOrange;
+
+        .btn{
+            color:$brightOrange;
+        }
+    }
+    &.suv{
+        background-color: $darkCyan;
+
+        .btn{
+            color:$darkCyan;
+        }
+    }
+    &.luxury{
+        background-color: $veryDarkCyan;
+
+        .btn{
+            color:$veryDarkCyan;
+        }
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 40px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border-radius: 20px;
+        width: fit-content;
+        background-color: $veryLightGray;
+        font-size: .8rem;
+        font-weight: 400;
+        border: 2px solid $veryLightGray;
+
+        transition: color, background-color, 200ms linear;
+
+        &:hover{
+            background-color: rgba(0,0,0,0);
+            color: $veryLightGray;
+        }
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .three-column-preview{
+        height: 100%;
+    }
+    .container{
+        flex-direction: column;
+        width: 95%;
+        margin: 40px 0;
+    }
+}
+}

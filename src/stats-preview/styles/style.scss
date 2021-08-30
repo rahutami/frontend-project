@@ -1,0 +1,111 @@
+@import './styling';
+
+.stats-preview{
+    background-color: $veryDarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .container{
+        background-color: $darkDesaturatedBlue;
+        width: 90%;
+        max-width: 900px;
+        display: flex;
+        align-items: stretch;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .description-container{
+        width: 50%;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .img-container{
+        position: relative;
+        width: 50%;
+        background-size: cover;
+        background-image: url('../images/image-header-desktop.jpg');
+
+        .cover{
+            position: absolute;
+            background-color: hsla(278, 40%, 33%, 0.5);
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    h1{
+        color: white;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+
+        span{
+            color: $softViolet;
+        }
+    }
+
+    p {
+        color: $slightlyTransparentWhite;
+        margin: 0;
+        margin: 40px 0 80px 0;
+    }
+
+    .stats {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        h2{
+            margin: 0;
+        }
+
+        h4{
+            text-transform: uppercase;
+            font-family: 'Lexend Deca', sans-serif;
+            font-weight: 400;
+            font-size: .7rem;
+            margin: 0;
+            color: $slightlyTransparentWhite;
+            margin-top: 5px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .stats-preview{
+        height: fit-content;
+
+        .container{
+            margin: 50px 0;
+            flex-direction: column-reverse;
+            > * {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    
+        .stats {
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .img-container{
+            background-image: url('../images/image-header-mobile.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 200px;
+        }
+
+        p{
+            line-height: 2rem;
+        }
+    }
+}
